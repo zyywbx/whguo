@@ -41,17 +41,35 @@ void Show(int a[], int n) {
         printf("%d ",a[i]);
     printf("\n");
 }
+
+void const_num(int a[],int *p,int n){
+    int i;
+    for(i=0;i < n;++i) {
+        if (a[i]<0)
+        *p[0]+=1;
+        if (0==a[i])
+        *p[1]+=1;
+        if (a[i]>0)
+        *p[2]+=1;
+    }
+}
  
 int main() {
-    int a[10],i,n;
+    int a[10]={-1,-1,-2,0,0,3,2,5,6,6};
+    int b[3]={0};
+    int *p=b[0];
+    int i,n;
     srand(time(0));
-    for(i = 0; i < N; i++)
-        a[i] = rand()%10;
+
     printf("排序前:\n");
     Show(a,N);
     Sort(a,N);
     printf("排序后:\n");
     Show(a,N);
+    const_num(a,p,n);
+    printf("小于0的个数:%d\n",b[0]);
+    printf("等于0的个数:%d\n",b[1]);
+    printf("大于0的个数:%d\n",b[2]);
     n = DelSame(a,N);
     printf("删除相同元素后:\n");
     Show(a,n);
