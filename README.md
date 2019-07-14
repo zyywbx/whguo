@@ -4,10 +4,12 @@
 ### ASCII字符串排序 2019/7/4
 ### numcount(数值统计) 2019/7/7
 ### isprime（素数筛选算法） 2019/7/7
+[TOC]
 ## 第五章
 ###字符统计 char_count
 ###素数回文 primeback
 ###杨辉三角形 Triangle
+[TOC]
 ## 第六章
 ###快速统计 fast_sort
 ###日期计算 date
