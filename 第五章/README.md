@@ -1,3 +1,4 @@
+[toc]
 ##第五章
 ###字符统计 char_count
 ###素数回文 primeback
