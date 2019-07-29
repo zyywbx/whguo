@@ -11,11 +11,9 @@ int find_min(int *data,int length)
     temp=0;
     for(i=0;i<length;i++)
     {
-        if(min>data[i]);
+        if(min>data[i])
         {
-            temp=data[i];
-            data[i]=min;
-            min=temp;
+            min=data[i];
         }
     }
     return min;
@@ -24,8 +22,8 @@ int main()
 {
     int data[100]={0};
     int length=0;
-    int i,j;
-    i=0,j=0;
+    int i,j,k;
+    i=0,j=0,k=0;
     while(length<100)
     {
         scanf("%d",&data[length]);
@@ -44,7 +42,15 @@ int main()
     }
     printf("\n");
     int min=find_min(data,length);
-    data[0] = min;
+    while(k<length)
+    {
+        if(data[k]==min)
+        {break;}
+        k++;
+    }
+    int temp=data[k];
+    data[k]=data[0];
+    data[0]=temp;
     while(j<length)
     {
         printf("%d ",data[j]);
